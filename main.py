@@ -20,7 +20,7 @@ inventory = {
 
 # Function to display menu
 def show_menu():
-    print("\n------------------ Menu ------------------")
+    print("\n------------------ -:Menu:- ------------------")
     for item, price in menu.items():
         print(f"{item.capitalize()} - ₹{price:.2f}")
 
@@ -31,7 +31,7 @@ def place_order():
     total_cost = 0
 
     while True:
-        print("\n---------------- Place Your Order ----------------")
+        print("\n---------------- -:Place Your Order:- ----------------")
         n = int(input("How many items would you like to order? "))
 
         for _ in range(n):
@@ -81,14 +81,14 @@ def generate_invoice(order, total_cost):
         table.add_row([item["item"].capitalize(), item["quantity"], f"₹{item['price_each']:.2f}", f"₹{total_price:.2f}"])
 
     # Print the invoice with total amount
-    print("\n--------------------- Invoice ---------------------")
+    print("\n--------------------- -:Invoice:- ---------------------")
     print(table)
     print(f"Total Amount: ₹{total_cost:.2f}")
 
 # Function to process payment
 def process_payment(total_cost):
     """Handles the payment process for the customer."""
-    print("\n----------------- Payment Section -----------------")
+    print("\n----------------- -:Payment Section:- -----------------")
     print(f"Total Amount to Pay: ₹{total_cost:.2f}")
 
     while True:
@@ -107,7 +107,7 @@ def process_payment(total_cost):
 # Main function to run the application
 def main():
     while True:
-        print("\n-------------------- Restaurant Management System --------------------")
+        print("\n-------------------- -:Restaurant Management System:- --------------------")
         print("1. Show Menu")
         print("2. Place Order")
         print("3. Exit")
